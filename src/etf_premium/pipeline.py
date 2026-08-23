@@ -13,7 +13,7 @@ from .config import load_funds
 from .history import add_deltas, latest_snapshot, load_snapshots
 from .models import FundConfig
 from .provider import AkShareProvider, MarketClosed, ProviderError
-from .site import build_site
+from .site import build_site, build_waiting_site
 
 BEIJING = ZoneInfo("Asia/Shanghai")
 
@@ -68,17 +68,22 @@ def run_pipeline(
 ) -> dict[str, Any]:
     now = (now or datetime.now(BEIJING)).astimezone(BEIJING)
     result = _base_result(now, PipelineStatus.FRESH)
+    funds = load_funds(config_path)
+    snapshots = load_snapshots(snapshot_dir)
     if now.weekday() >= 5 and not force_refresh:
         result.update(
             status=PipelineStatus.SKIPPED.value,
             warning="周末不运行行情抓取",
             source="none",
         )
+        if not snapshots:
+            build_waiting_site(
+                captured_at=result["captured_at"], output_dir=output_dir, reason=result["warning"]
+            )
+            result["should_deploy"] = True
         _write_json(output_dir / "run_result.json", result)
         return result
 
-    funds = load_funds(config_path)
-    snapshots = load_snapshots(snapshot_dir)
     active_provider = provider or AkShareProvider()
     try:
         rows = active_provider.fetch(funds, now.date())
@@ -88,6 +93,11 @@ def run_pipeline(
             warning=str(exc),
             source=active_provider.source_name,
         )
+        if not snapshots:
+            build_waiting_site(
+                captured_at=result["captured_at"], output_dir=output_dir, reason=result["warning"]
+            )
+            result["should_deploy"] = True
         _write_json(output_dir / "run_result.json", result)
         return result
     except ProviderError as exc:
@@ -130,7 +140,11 @@ def run_pipeline(
             existing = json.loads(snapshot_path.read_text(encoding="utf-8"))
         except (OSError, json.JSONDecodeError):
             existing = None
-    if not existing or existing.get("funds") != rows or existing.get("source") != snapshot["source"]:
+    if (
+        not existing
+        or existing.get("funds") != rows
+        or existing.get("source") != snapshot["source"]
+    ):
         _write_json(snapshot_path, snapshot)
         result["snapshot_changed"] = True
     else:

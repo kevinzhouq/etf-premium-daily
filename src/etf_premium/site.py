@@ -8,6 +8,22 @@ from typing import Any
 from .render import format_pct, render_ranking
 
 
+def build_waiting_site(*, captured_at: str, output_dir: Path, reason: str) -> None:
+    output_dir.mkdir(parents=True, exist_ok=True)
+    page = f"""<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ETF每日溢价率排序</title>
+<style>body{{margin:0;background:#f6f8fb;color:#111827;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Microsoft YaHei",sans-serif}}main{{max-width:760px;margin:10vh auto;padding:24px}}article{{background:#fff;border:1px solid #e5e7eb;border-radius:16px;padding:36px;box-shadow:0 8px 30px rgba(15,23,42,.05)}}h1{{margin-top:0}}.status{{border-left:6px solid #3578e5;background:#eff6ff;padding:16px;margin:24px 0}}p{{line-height:1.8;color:#475569}}small{{color:#64748b}}</style>
+</head><body><main><article><h1>ETF每日溢价率排序</h1>
+<div class="status"><strong>等待首个交易日数据</strong></div>
+<p>项目已经部署成功。当前没有可发布的有效行情快照；首个交易日任务完成后，本页会自动替换为完整的 ETF 溢价率排行榜。</p>
+<p>本页不会使用测试数据或过期数据冒充实时行情。</p>
+<small>检查时间：{html.escape(captured_at.replace("T", " ")[:19])}（北京时间）<br>原因：{html.escape(reason)}<br>仅供信息参考，不构成投资建议。</small>
+</article></main></body></html>"""
+    (output_dir / "index.html").write_text(page, encoding="utf-8")
+
+
 def _json_write(path: Path, payload: Any) -> None:
     path.write_text(
         json.dumps(payload, ensure_ascii=False, indent=2, allow_nan=False) + "\n",
@@ -24,9 +40,7 @@ def _cell(value: float | None, *, signed: bool = False) -> str:
     return f'<td class="number {css}">{format_pct(value, signed=signed)}</td>'
 
 
-def build_site(
-    result: dict[str, Any], output_dir: Path, *, history: list[dict[str, Any]]
-) -> None:
+def build_site(result: dict[str, Any], output_dir: Path, *, history: list[dict[str, Any]]) -> None:
     output_dir.mkdir(parents=True, exist_ok=True)
     render_ranking(result, output_dir / "latest.png")
     _json_write(output_dir / "latest.json", result)
@@ -47,11 +61,11 @@ def build_site(
         table_rows.append(
             f'<tr data-code="{html.escape(str(row["code"]))}">'
             f"<td>{index}</td>"
-            f'<td><strong>{html.escape(str(row["display_name"]))}</strong>'
+            f"<td><strong>{html.escape(str(row['display_name']))}</strong>"
             f'<span class="code">{html.escape(str(row["code"]))}</span></td>'
-            f'{_cell(row.get("premium_rate"))}'
-            f'{_cell(row.get("delta_previous"), signed=True)}'
-            f'{_cell(row.get("delta_30d"), signed=True)}'
+            f"{_cell(row.get('premium_rate'))}"
+            f"{_cell(row.get('delta_previous'), signed=True)}"
+            f"{_cell(row.get('delta_30d'), signed=True)}"
             "</tr>"
         )
 
@@ -90,15 +104,15 @@ def build_site(
 </head>
 <body><main><article class="card">
   <h1>ETF每日溢价率排序</h1>
-  <div class="meta">北京时间 {html.escape(str(result['captured_at']).replace('T', ' ')[:19])} · 交易日 {html.escape(str(result['trade_date']))}</div>
+  <div class="meta">北京时间 {html.escape(str(result["captured_at"]).replace("T", " ")[:19])} · 交易日 {html.escape(str(result["trade_date"]))}</div>
   <div class="status {status_class}">{status_text}<span class="detail">{warning_detail}</span></div>
   <img class="image" src="latest.png" alt="ETF每日溢价率排行榜">
   <div class="table-wrap"><table>
     <thead><tr><th>序号</th><th>ETF名称</th><th class="number">溢价率</th><th class="number">较昨天</th><th class="number">较30天前</th></tr></thead>
-    <tbody>{''.join(table_rows)}</tbody>
+    <tbody>{"".join(table_rows)}</tbody>
   </table></div>
   <footer>
-    <div>数据来源：{html.escape(str(result['source']))}。正数表示溢价，负数表示折价。</div>
+    <div>数据来源：{html.escape(str(result["source"]))}。正数表示溢价，负数表示折价。</div>
     <div>仅供信息参考，不构成投资建议。</div>
     <div class="links"><a href="latest.json">最新 JSON</a><a href="history.json">历史 JSON</a></div>
   </footer>

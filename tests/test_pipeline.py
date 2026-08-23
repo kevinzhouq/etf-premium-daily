@@ -85,4 +85,6 @@ def test_weekend_is_skipped_without_calling_provider(tmp_path):
     )
 
     assert result["status"] == PipelineStatus.SKIPPED.value
+    assert result["should_deploy"] is True
+    assert "等待首个交易日" in (tmp_path / "site" / "index.html").read_text(encoding="utf-8")
     assert not (tmp_path / "snapshots").exists()
