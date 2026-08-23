@@ -1,0 +1,37 @@
+funds:
+  - code: "159655"
+    market: "SZ"
+    display_name: "华夏标普500"
+    enabled: true
+  - code: "159612"
+    market: "SZ"
+    display_name: "国泰标普500"
+    enabled: true
+  - code: "159659"
+    market: "SZ"
+    display_name: "招商纳斯达克100"
+    enabled: true
+  - code: "513870"
+    market: "SH"
+    display_name: "富国纳斯达克100"
+    enabled: true
+  - code: "159696"
+    market: "SZ"
+    display_name: "易方达纳斯达克100"
+    enabled: true
+  - code: "159501"
+    market: "SZ"
+    display_name: "嘉实纳斯达克100"
+    enabled: true
+  - code: "159941"
+    market: "SZ"
+    display_name: "广发纳斯达克100"
+    enabled: true
+  - code: "513110"
+    market: "SH"
+    display_name: "华泰柏瑞纳斯达克100"
+    enabled: true
+  - code: "159509"
+    market: "SZ"
+    display_name: "景顺长城纳斯达克科技"
+    enabled: true
