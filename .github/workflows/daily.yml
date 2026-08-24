@@ -2,6 +2,9 @@ name: ETF premium daily
 
 on:
   schedule:
+    # UTC 01:45 / 06:30 / 08:30 = 北京时间 09:45 / 14:30 / 16:30
+    - cron: "45 1 * * 1-5"
+    - cron: "30 6 * * 1-5"
     - cron: "30 8 * * 1-5"
   workflow_dispatch:
     inputs:
