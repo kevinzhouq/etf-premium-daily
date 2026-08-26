@@ -1,6 +1,6 @@
 {
   "trade_date": "2026-08-26",
-  "captured_at": "2026-08-26T15:17:05.726719+08:00",
+  "captured_at": "2026-08-26T17:11:42.987154+08:00",
   "source": "AkShare / 东方财富",
   "status": "fresh",
   "funds": [
@@ -14,7 +14,7 @@
       "discount_rate": -7.77,
       "premium_rate": 7.770090473656199,
       "data_date": "2026-08-26",
-      "source_updated_at": "2026-08-26T15:16:30+08:00"
+      "source_updated_at": "2026-08-26T15:34:30+08:00"
     },
     {
       "code": "159612",
@@ -26,7 +26,7 @@
       "discount_rate": -7.47,
       "premium_rate": 7.466238940342529,
       "data_date": "2026-08-26",
-      "source_updated_at": "2026-08-26T15:17:30+08:00"
+      "source_updated_at": "2026-08-26T15:34:57+08:00"
     },
     {
       "code": "159659",
@@ -38,7 +38,7 @@
       "discount_rate": -9.28,
       "premium_rate": 9.278350515463906,
       "data_date": "2026-08-26",
-      "source_updated_at": "2026-08-26T15:17:15+08:00"
+      "source_updated_at": "2026-08-26T15:34:33+08:00"
     },
     {
       "code": "513870",
@@ -50,7 +50,7 @@
       "discount_rate": -9.07,
       "premium_rate": 9.067715530987574,
       "data_date": "2026-08-26",
-      "source_updated_at": "2026-08-26T15:16:53+08:00"
+      "source_updated_at": "2026-08-26T16:11:51+08:00"
     },
     {
       "code": "159696",
@@ -62,7 +62,7 @@
       "discount_rate": -9.9,
       "premium_rate": 9.902659198433849,
       "data_date": "2026-08-26",
-      "source_updated_at": "2026-08-26T15:17:30+08:00"
+      "source_updated_at": "2026-08-26T15:34:51+08:00"
     },
     {
       "code": "159501",
@@ -74,7 +74,7 @@
       "discount_rate": -12.31,
       "premium_rate": 12.308687217072656,
       "data_date": "2026-08-26",
-      "source_updated_at": "2026-08-26T15:17:15+08:00"
+      "source_updated_at": "2026-08-26T15:34:57+08:00"
     },
     {
       "code": "159941",
@@ -86,7 +86,7 @@
       "discount_rate": -11.26,
       "premium_rate": 11.26132215763147,
       "data_date": "2026-08-26",
-      "source_updated_at": "2026-08-26T15:17:15+08:00"
+      "source_updated_at": "2026-08-26T15:34:27+08:00"
     },
     {
       "code": "513110",
@@ -98,7 +98,7 @@
       "discount_rate": -8.65,
       "premium_rate": 8.652532287212944,
       "data_date": "2026-08-26",
-      "source_updated_at": "2026-08-26T15:17:22+08:00"
+      "source_updated_at": "2026-08-26T16:11:38+08:00"
     },
     {
       "code": "159509",
@@ -110,7 +110,7 @@
       "discount_rate": -25.51,
       "premium_rate": 25.506072874493935,
       "data_date": "2026-08-26",
-      "source_updated_at": "2026-08-26T15:16:30+08:00"
+      "source_updated_at": "2026-08-26T15:34:36+08:00"
     }
   ]
 }
