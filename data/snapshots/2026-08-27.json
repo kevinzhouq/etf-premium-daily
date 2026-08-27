@@ -1,0 +1,116 @@
+{
+  "trade_date": "2026-08-27",
+  "captured_at": "2026-08-27T20:01:15.621067+08:00",
+  "source": "AkShare / 东方财富",
+  "status": "fresh",
+  "funds": [
+    {
+      "code": "159655",
+      "market": "SZ",
+      "display_name": "华夏标普500",
+      "source_name": "标普500ETF华夏",
+      "latest_price": 2.038,
+      "iopv": 1.8779,
+      "discount_rate": -8.53,
+      "premium_rate": 8.525480590020763,
+      "data_date": "2026-08-27",
+      "source_updated_at": "2026-08-27T15:34:39+08:00"
+    },
+    {
+      "code": "159612",
+      "market": "SZ",
+      "display_name": "国泰标普500",
+      "source_name": "标普500ETF国泰",
+      "latest_price": 2.087,
+      "iopv": 1.9319,
+      "discount_rate": -8.03,
+      "premium_rate": 8.02836585744604,
+      "data_date": "2026-08-27",
+      "source_updated_at": "2026-08-27T15:34:57+08:00"
+    },
+    {
+      "code": "159659",
+      "market": "SZ",
+      "display_name": "招商纳斯达克100",
+      "source_name": "纳斯达克100ETF招商",
+      "latest_price": 2.359,
+      "iopv": 2.1343,
+      "discount_rate": -10.53,
+      "premium_rate": 10.528041980977365,
+      "data_date": "2026-08-27",
+      "source_updated_at": "2026-08-27T15:34:09+08:00"
+    },
+    {
+      "code": "513870",
+      "market": "SH",
+      "display_name": "富国纳斯达克100",
+      "source_name": "纳指ETF富国",
+      "latest_price": 2.079,
+      "iopv": 1.8815,
+      "discount_rate": -10.5,
+      "premium_rate": 10.49694392771725,
+      "data_date": "2026-08-27",
+      "source_updated_at": "2026-08-27T16:11:54+08:00"
+    },
+    {
+      "code": "159696",
+      "market": "SZ",
+      "display_name": "易方达纳斯达克100",
+      "source_name": "纳指ETF易方达",
+      "latest_price": 2.044,
+      "iopv": 1.8392,
+      "discount_rate": -11.14,
+      "premium_rate": 11.135276207046552,
+      "data_date": "2026-08-27",
+      "source_updated_at": "2026-08-27T15:34:30+08:00"
+    },
+    {
+      "code": "159501",
+      "market": "SZ",
+      "display_name": "嘉实纳斯达克100",
+      "source_name": "纳指ETF嘉实",
+      "latest_price": 2.103,
+      "iopv": 1.8558,
+      "discount_rate": -13.32,
+      "premium_rate": 13.320400905269981,
+      "data_date": "2026-08-27",
+      "source_updated_at": "2026-08-27T15:34:06+08:00"
+    },
+    {
+      "code": "159941",
+      "market": "SZ",
+      "display_name": "广发纳斯达克100",
+      "source_name": "纳指ETF广发",
+      "latest_price": 1.663,
+      "iopv": 1.4795,
+      "discount_rate": -12.4,
+      "premium_rate": 12.402838796890837,
+      "data_date": "2026-08-27",
+      "source_updated_at": "2026-08-27T15:34:36+08:00"
+    },
+    {
+      "code": "513110",
+      "market": "SH",
+      "display_name": "华泰柏瑞纳斯达克100",
+      "source_name": "纳指ETF华泰柏瑞",
+      "latest_price": 2.495,
+      "iopv": 2.2689,
+      "discount_rate": -9.97,
+      "premium_rate": 9.965181365419372,
+      "data_date": "2026-08-27",
+      "source_updated_at": "2026-08-27T16:11:33+08:00"
+    },
+    {
+      "code": "159509",
+      "market": "SZ",
+      "display_name": "景顺长城纳斯达克科技",
+      "source_name": "纳指科技ETF景顺",
+      "latest_price": 2.82,
+      "iopv": 2.226,
+      "discount_rate": -26.68,
+      "premium_rate": 26.68463611859837,
+      "data_date": "2026-08-27",
+      "source_updated_at": "2026-08-27T15:34:45+08:00"
+    }
+  ]
+}
