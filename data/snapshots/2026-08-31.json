@@ -1,6 +1,6 @@
 {
   "trade_date": "2026-08-31",
-  "captured_at": "2026-08-31T15:38:45.929837+08:00",
+  "captured_at": "2026-08-31T22:11:19.431399+08:00",
   "source": "AkShare / 东方财富",
   "status": "fresh",
   "funds": [
@@ -50,7 +50,7 @@
       "discount_rate": -8.8,
       "premium_rate": 8.800084463918068,
       "data_date": "2026-08-31",
-      "source_updated_at": "2026-08-31T15:38:30+08:00"
+      "source_updated_at": "2026-08-31T16:12:00+08:00"
     },
     {
       "code": "159696",
@@ -98,7 +98,7 @@
       "discount_rate": -8.8,
       "premium_rate": 8.795586883236272,
       "data_date": "2026-08-31",
-      "source_updated_at": "2026-08-31T15:38:38+08:00"
+      "source_updated_at": "2026-08-31T16:11:38+08:00"
     },
     {
       "code": "159509",
