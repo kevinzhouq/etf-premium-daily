@@ -1,6 +1,6 @@
 {
   "trade_date": "2026-09-03",
-  "captured_at": "2026-09-03T14:29:26.876963+08:00",
+  "captured_at": "2026-09-03T19:28:13.594453+08:00",
   "source": "AkShare / 东方财富",
   "status": "fresh",
   "funds": [
@@ -14,7 +14,7 @@
       "discount_rate": -6.81,
       "premium_rate": 6.805947876139196,
       "data_date": "2026-09-03",
-      "source_updated_at": "2026-09-03T14:29:54+08:00"
+      "source_updated_at": "2026-09-03T15:34:09+08:00"
     },
     {
       "code": "159612",
@@ -26,91 +26,91 @@
       "discount_rate": -6.35,
       "premium_rate": 6.354307038457563,
       "data_date": "2026-09-03",
-      "source_updated_at": "2026-09-03T14:29:42+08:00"
+      "source_updated_at": "2026-09-03T15:34:45+08:00"
     },
     {
       "code": "159659",
       "market": "SZ",
       "display_name": "招商纳斯达克100",
       "source_name": "纳斯达克100ETF招商",
-      "latest_price": 2.318,
+      "latest_price": 2.316,
       "iopv": 2.1283,
-      "discount_rate": -8.91,
-      "premium_rate": 8.913217121646388,
+      "discount_rate": -8.82,
+      "premium_rate": 8.81924540713246,
       "data_date": "2026-09-03",
-      "source_updated_at": "2026-09-03T14:29:54+08:00"
+      "source_updated_at": "2026-09-03T15:34:33+08:00"
     },
     {
       "code": "513870",
       "market": "SH",
       "display_name": "富国纳斯达克100",
       "source_name": "纳指ETF富国",
-      "latest_price": 2.041,
+      "latest_price": 2.04,
       "iopv": 1.8762,
-      "discount_rate": -8.78,
-      "premium_rate": 8.783711757808321,
+      "discount_rate": -8.73,
+      "premium_rate": 8.730412535976972,
       "data_date": "2026-09-03",
-      "source_updated_at": "2026-09-03T14:29:34+08:00"
+      "source_updated_at": "2026-09-03T16:11:46+08:00"
     },
     {
       "code": "159696",
       "market": "SZ",
       "display_name": "易方达纳斯达克100",
       "source_name": "纳指ETF易方达",
-      "latest_price": 2.011,
+      "latest_price": 2.009,
       "iopv": 1.834,
-      "discount_rate": -9.65,
-      "premium_rate": 9.651035986913858,
+      "discount_rate": -9.54,
+      "premium_rate": 9.541984732824416,
       "data_date": "2026-09-03",
-      "source_updated_at": "2026-09-03T14:29:51+08:00"
+      "source_updated_at": "2026-09-03T15:34:24+08:00"
     },
     {
       "code": "159501",
       "market": "SZ",
       "display_name": "嘉实纳斯达克100",
       "source_name": "纳指ETF嘉实",
-      "latest_price": 2.09,
+      "latest_price": 2.092,
       "iopv": 1.8506,
-      "discount_rate": -12.94,
-      "premium_rate": 12.936344969199176,
+      "discount_rate": -13.04,
+      "premium_rate": 13.04441802658598,
       "data_date": "2026-09-03",
-      "source_updated_at": "2026-09-03T14:29:51+08:00"
+      "source_updated_at": "2026-09-03T15:34:21+08:00"
     },
     {
       "code": "159941",
       "market": "SZ",
       "display_name": "广发纳斯达克100",
       "source_name": "纳指ETF广发",
-      "latest_price": 1.639,
+      "latest_price": 1.636,
       "iopv": 1.4752,
-      "discount_rate": -11.1,
-      "premium_rate": 11.103579175704992,
+      "discount_rate": -10.9,
+      "premium_rate": 10.90021691973968,
       "data_date": "2026-09-03",
-      "source_updated_at": "2026-09-03T14:29:45+08:00"
+      "source_updated_at": "2026-09-03T15:34:18+08:00"
     },
     {
       "code": "513110",
       "market": "SH",
       "display_name": "华泰柏瑞纳斯达克100",
       "source_name": "纳指ETF华泰柏瑞",
-      "latest_price": 2.45,
+      "latest_price": 2.447,
       "iopv": 2.2624,
-      "discount_rate": -8.29,
-      "premium_rate": 8.29207920792081,
+      "discount_rate": -8.16,
+      "premium_rate": 8.159476661951913,
       "data_date": "2026-09-03",
-      "source_updated_at": "2026-09-03T14:29:41+08:00"
+      "source_updated_at": "2026-09-03T16:11:56+08:00"
     },
     {
       "code": "159509",
       "market": "SZ",
       "display_name": "景顺长城纳斯达克科技",
       "source_name": "纳指科技ETF景顺",
-      "latest_price": 2.785,
+      "latest_price": 2.776,
       "iopv": 2.2414,
-      "discount_rate": -24.25,
-      "premium_rate": 24.25269920585349,
+      "discount_rate": -23.85,
+      "premium_rate": 23.851164450789675,
       "data_date": "2026-09-03",
-      "source_updated_at": "2026-09-03T14:29:54+08:00"
+      "source_updated_at": "2026-09-03T15:34:27+08:00"
     }
   ]
 }
